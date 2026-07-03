@@ -1,6 +1,6 @@
 {
   "name": "@jenssegers/image-compressor",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Compress an image toward a target file size, powered by sharp. Library and CLI.",
   "keywords": [
     "image",
