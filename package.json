@@ -1,0 +1,87 @@
+{
+  "name": "@jenssegers/image-compressor",
+  "version": "0.0.0",
+  "description": "Compress an image toward a target file size, powered by sharp. Library and CLI.",
+  "keywords": [
+    "image",
+    "compress",
+    "compression",
+    "sharp",
+    "jpeg",
+    "webp",
+    "avif",
+    "png",
+    "target-size",
+    "file-size",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "Jens Segers",
+  "homepage": "https://github.com/jenssegers/image-compressor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenssegers/image-compressor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jenssegers/image-compressor/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "sideEffects": false,
+  "bin": {
+    "image-compressor": "./dist/cli.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "check:package": "publint --strict && attw --pack .",
+    "prepublishOnly": "npm run build && npm run check:package"
+  },
+  "dependencies": {
+    "bytes": "^3.1.2",
+    "commander": "^15.0.0",
+    "picocolors": "^1.1.1",
+    "sharp": "^0.35.3",
+    "tinyglobby": "^0.2.17"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.4",
+    "@biomejs/biome": "^2.5.2",
+    "@types/bytes": "^3.1.5",
+    "@types/node": "^26.1.0",
+    "@vitest/coverage-v8": "^4.1.9",
+    "publint": "^0.3.21",
+    "tsdown": "^0.22.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}
