@@ -43,27 +43,22 @@ function mix(a: Rgb, b: Rgb, t: number): [number, number, number] {
 
 const fg = (r: number, g: number, b: number): string => `\x1b[38;2;${r};${g};${b}m`
 
-// A live purple progress bar pinned to the bottom line. Result lines are printed
-// above it and scroll up; a shimmer highlight travels across the filled portion.
-// When stdout is not a TTY (pipe/CI) everything degrades to plain println output.
+// A live purple progress bar with a blank spacer line pinned directly above it
+// (a two-line footer). Finished-file result lines scroll above the footer; a
+// shimmer highlight travels across the filled portion. When stdout is not a TTY
+// (pipe/CI) everything degrades to plain println output.
 function createProgress(total: number) {
   const tty = Boolean(process.stdout.isTTY) && total > 0
+  const FOOTER_HEIGHT = 2 // blank spacer line + bar line
   let current = 0
   let label = ''
   let phase = 0
+  let rendered = false
   let timer: ReturnType<typeof setInterval> | undefined
 
-  const restore = (): void => void process.stdout.write('\r\x1b[2K\x1b[?25h')
-  const onSigint = (): void => {
-    if (timer) clearInterval(timer)
-    restore()
-    process.exit(130)
-  }
-
-  const draw = (final = false): void => {
-    if (!tty) return
+  const barLine = (final: boolean): string => {
     const columns = process.stdout.columns ?? 80
-    const width = Math.max(10, Math.min(36, columns - 44))
+    const width = Math.max(10, Math.min(30, columns - 52))
     const filled = Math.round((total === 0 ? 1 : current / total) * width)
     const head = final ? -1 : phase % (width + 8)
 
@@ -84,18 +79,45 @@ function createProgress(total: number) {
       }
     }
 
-    const percent = Math.round((total === 0 ? 1 : current / total) * 100)
-    const name = label.length > 28 ? `…${label.slice(-27)}` : label
-    const status = pc.dim(final ? 'compressed ' : 'compressing')
-    const trailer = final ? '' : `  ${pc.dim(name)}`
-    const line = `  ${status} ${bar}${RESET} ${String(percent).padStart(3)}%  ${pc.dim(`${current}/${total}`)}${trailer}`
-    process.stdout.write(`\r\x1b[2K${line}${final ? '\n' : ''}`)
+    const statusText = final ? 'compressed ' : 'compressing'
+    const percent = String(Math.round((total === 0 ? 1 : current / total) * 100)).padStart(3)
+    const count = `${current}/${total}`
+    // Keep the bar line within one terminal row so the cursor math stays correct.
+    const fixed = 2 + statusText.length + 1 + width + 1 + 4 + 2 + count.length
+    const room = columns - fixed - 3
+    let name = final ? '' : label
+    if (name.length > room) name = room > 1 ? `…${name.slice(-(room - 1))}` : ''
+    const trailer = name === '' ? '' : `  ${pc.dim(name)}`
+    return `  ${pc.dim(statusText)} ${bar}${RESET} ${percent}%  ${pc.dim(count)}${trailer}`
+  }
+
+  // Move the cursor to the top line of the footer (the blank spacer).
+  const toFooterTop = (): void => {
+    process.stdout.write(rendered ? `\x1b[${FOOTER_HEIGHT - 1}A\r` : '\r')
+    rendered = true
+  }
+
+  // Paint the footer (blank spacer line, then the bar) from the current line down.
+  const paintFooter = (final: boolean): void => {
+    process.stdout.write(`\x1b[2K\n\x1b[2K${barLine(final)}`)
+  }
+
+  const draw = (final = false): void => {
+    if (!tty) return
+    toFooterTop()
+    paintFooter(final)
+  }
+
+  const onSigint = (): void => {
+    if (timer) clearInterval(timer)
+    if (rendered) process.stdout.write('\r\x1b[2K\x1b[1A\r\x1b[2K')
+    process.stdout.write('\x1b[?25h')
+    process.exit(130)
   }
 
   return {
     start(): void {
       if (!tty) return
-      process.stdout.write('\n') // breathing room above the bar
       process.stdout.write('\x1b[?25l') // hide cursor
       process.on('SIGINT', onSigint)
       timer = setInterval(() => {
@@ -112,22 +134,23 @@ function createProgress(total: number) {
       current += 1
       draw()
     },
-    // Print a finished-file line above the bar (or plainly when not a TTY).
+    // Print a finished-file line above the footer (or plainly when not a TTY).
     log(text: string): void {
       if (!tty) {
         console.log(text)
         return
       }
-      process.stdout.write(`\r\x1b[2K${text}\n`)
-      draw()
+      toFooterTop()
+      process.stdout.write(`\x1b[2K${text}\n`)
+      paintFooter(false)
     },
-    // Persist a completed 100% bar (no shimmer) instead of erasing it.
+    // Persist the completed 100% bar (no shimmer) with its spacer line.
     finish(): void {
       if (!tty) return
       if (timer) clearInterval(timer)
       process.off('SIGINT', onSigint)
       draw(true)
-      process.stdout.write('\x1b[?25h') // show cursor
+      process.stdout.write('\n\x1b[?25h') // move below the bar, show cursor
     },
   }
 }
