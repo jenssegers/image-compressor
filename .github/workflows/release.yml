@@ -34,4 +34,5 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org
       - run: npm ci
-      - run: npm publish
+      # Provenance lives here (CI only); publishConfig stays clean so local publishes work.
+      - run: npm publish --provenance
