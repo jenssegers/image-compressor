@@ -95,6 +95,7 @@ function createProgress(total: number) {
   return {
     start(): void {
       if (!tty) return
+      process.stdout.write('\n') // breathing room above the bar
       process.stdout.write('\x1b[?25l') // hide cursor
       process.on('SIGINT', onSigint)
       timer = setInterval(() => {
