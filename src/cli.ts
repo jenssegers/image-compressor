@@ -60,12 +60,12 @@ function createProgress(total: number) {
     process.exit(130)
   }
 
-  const draw = (): void => {
+  const draw = (final = false): void => {
     if (!tty) return
     const columns = process.stdout.columns ?? 80
     const width = Math.max(10, Math.min(36, columns - 44))
     const filled = Math.round((total === 0 ? 1 : current / total) * width)
-    const head = phase % (width + 8)
+    const head = final ? -1 : phase % (width + 8)
 
     let bar = ''
     for (let i = 0; i < width; i++) {
@@ -86,8 +86,10 @@ function createProgress(total: number) {
 
     const percent = Math.round((total === 0 ? 1 : current / total) * 100)
     const name = label.length > 28 ? `…${label.slice(-27)}` : label
-    const line = `  ${pc.dim('compressing')} ${bar}${RESET} ${String(percent).padStart(3)}%  ${pc.dim(`${current}/${total}`)}  ${pc.dim(name)}`
-    process.stdout.write(`\r\x1b[2K${line}`)
+    const status = pc.dim(final ? 'compressed ' : 'compressing')
+    const trailer = final ? '' : `  ${pc.dim(name)}`
+    const line = `  ${status} ${bar}${RESET} ${String(percent).padStart(3)}%  ${pc.dim(`${current}/${total}`)}${trailer}`
+    process.stdout.write(`\r\x1b[2K${line}${final ? '\n' : ''}`)
   }
 
   return {
@@ -118,11 +120,13 @@ function createProgress(total: number) {
       process.stdout.write(`\r\x1b[2K${text}\n`)
       draw()
     },
-    stop(): void {
+    // Persist a completed 100% bar (no shimmer) instead of erasing it.
+    finish(): void {
       if (!tty) return
       if (timer) clearInterval(timer)
       process.off('SIGINT', onSigint)
-      restore()
+      draw(true)
+      process.stdout.write('\x1b[?25h') // show cursor
     },
   }
 }
@@ -166,7 +170,7 @@ async function run(patterns: string[], options: CliOptions): Promise<void> {
       progress.tick()
     }
   } finally {
-    progress.stop()
+    progress.finish()
   }
 
   const done = files.length - failures
