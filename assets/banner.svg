@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="802" height="116" viewBox="0 0 802 116" role="img" aria-label="compressor">
+<svg xmlns="http://www.w3.org/2000/svg" width="672" height="116" viewBox="0 0 672 116" role="img" aria-label="compressor">
   <title>compressor</title>
   <defs>
-    <linearGradient id="px" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="802" y2="0">
+    <linearGradient id="px" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="672" y2="0">
       <stop offset="0" stop-color="#a855f7"/>
       <stop offset="1" stop-color="#7c3aed"/>
     </linearGradient>
@@ -9,131 +9,111 @@
     <rect x="27" y="14" width="11" height="16" fill="url(#px)"/>
     <rect x="40" y="14" width="11" height="16" fill="url(#px)"/>
     <rect x="53" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="66" y="14" width="11" height="16" fill="url(#px)"/>
     <rect x="14" y="32" width="11" height="16" fill="url(#px)"/>
     <rect x="14" y="50" width="11" height="16" fill="url(#px)"/>
     <rect x="14" y="68" width="11" height="16" fill="url(#px)"/>
     <rect x="27" y="86" width="11" height="16" fill="url(#px)"/>
     <rect x="40" y="86" width="11" height="16" fill="url(#px)"/>
     <rect x="53" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="66" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="93" y="14" width="11" height="16" fill="url(#px)"/>
     <rect x="106" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="119" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="132" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="93" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="145" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="93" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="145" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="93" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="145" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="80" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="119" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="80" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="119" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="80" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="119" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="93" y="86" width="11" height="16" fill="url(#px)"/>
     <rect x="106" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="119" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="132" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="172" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="224" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="146" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="185" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="146" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="159" y="32" width="11" height="16" fill="url(#px)"/>
     <rect x="172" y="32" width="11" height="16" fill="url(#px)"/>
     <rect x="185" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="211" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="224" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="146" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="159" y="50" width="11" height="16" fill="url(#px)"/>
     <rect x="172" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="198" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="224" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="172" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="224" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="172" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="224" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="251" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="264" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="277" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="290" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="185" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="146" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="185" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="146" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="185" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="212" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="225" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="238" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="212" y="32" width="11" height="16" fill="url(#px)"/>
     <rect x="251" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="303" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="251" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="264" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="277" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="290" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="251" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="251" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="330" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="343" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="356" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="369" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="330" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="382" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="330" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="343" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="356" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="369" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="330" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="369" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="330" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="382" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="409" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="422" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="435" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="448" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="461" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="409" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="409" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="422" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="435" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="448" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="409" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="409" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="422" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="435" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="448" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="461" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="501" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="514" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="527" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="540" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="488" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="501" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="514" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="527" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="540" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="488" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="501" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="514" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="527" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="580" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="593" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="606" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="619" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="567" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="580" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="593" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="606" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="619" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="567" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="580" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="593" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="606" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="659" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="672" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="685" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="646" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="698" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="646" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="698" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="646" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="698" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="659" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="672" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="685" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="725" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="738" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="751" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="764" y="14" width="11" height="16" fill="url(#px)"/>
-    <rect x="725" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="777" y="32" width="11" height="16" fill="url(#px)"/>
-    <rect x="725" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="738" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="751" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="764" y="50" width="11" height="16" fill="url(#px)"/>
-    <rect x="725" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="764" y="68" width="11" height="16" fill="url(#px)"/>
-    <rect x="725" y="86" width="11" height="16" fill="url(#px)"/>
-    <rect x="777" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="212" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="225" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="238" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="212" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="212" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="278" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="291" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="304" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="278" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="317" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="278" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="291" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="304" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="278" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="304" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="278" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="317" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="344" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="357" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="370" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="383" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="344" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="344" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="357" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="370" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="344" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="344" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="357" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="370" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="383" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="423" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="436" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="449" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="410" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="423" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="436" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="449" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="410" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="423" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="436" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="489" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="502" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="515" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="476" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="489" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="502" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="515" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="476" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="489" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="502" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="555" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="568" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="542" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="581" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="542" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="581" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="542" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="581" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="555" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="568" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="608" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="621" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="634" y="14" width="11" height="16" fill="url(#px)"/>
+    <rect x="608" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="647" y="32" width="11" height="16" fill="url(#px)"/>
+    <rect x="608" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="621" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="634" y="50" width="11" height="16" fill="url(#px)"/>
+    <rect x="608" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="634" y="68" width="11" height="16" fill="url(#px)"/>
+    <rect x="608" y="86" width="11" height="16" fill="url(#px)"/>
+    <rect x="647" y="86" width="11" height="16" fill="url(#px)"/>
 </svg>
