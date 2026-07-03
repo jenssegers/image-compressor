@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner.svg" alt="@jenssegers/image-compressor" width="640">
+  <img src="./assets/banner.svg" alt="image-compressor" width="600">
 </p>
 
 <p align="center">
