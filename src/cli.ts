@@ -86,7 +86,7 @@ function createProgress(total: number) {
 
     const percent = Math.round((total === 0 ? 1 : current / total) * 100)
     const name = label.length > 28 ? `…${label.slice(-27)}` : label
-    const line = `  ${fg(168, 85, 247)}compressing${RESET} ${bar}${RESET} ${String(percent).padStart(3)}%  ${pc.dim(`${current}/${total}`)}  ${pc.dim(name)}`
+    const line = `  ${pc.dim('compressing')} ${bar}${RESET} ${String(percent).padStart(3)}%  ${pc.dim(`${current}/${total}`)}  ${pc.dim(name)}`
     process.stdout.write(`\r\x1b[2K${line}`)
   }
 
